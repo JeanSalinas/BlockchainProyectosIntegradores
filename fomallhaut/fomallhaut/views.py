@@ -14,7 +14,7 @@ def registro_views(request):
         "title":"Registro"
     })
 def inicioAdministrador_views(request):
-    return render(request, 'formularios/inicioAdmionistrador.html',{
+    return render(request, 'formularios/inicioAdministrador.html',{
         "title":"Inicio Administrador"
     })
 def inicioEstudiante_views(request):
