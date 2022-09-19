@@ -1,0 +1,109 @@
+{%load static%}
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Grupo de Trabajo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/styles.css'%}">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <form>
+                    <center>
+                        <h1>Registro Grupo de Trabajo</h1>
+                    </center>
+                    <br>
+                    <legend>¿Cuantos intregrantes conforman su grupo de trabajo?</legend>
+
+                    <div class="ciclos">
+                        <input type="radio" name="resp1" value="1" /> 1 </>
+                        <input type="radio" name="resp1" value="2" /> 2 </>
+                        <input type="radio" name="resp1" value="2" /> 3 </>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <h3>Primer Integrante</h3>
+                    <div class="form-group">
+                        <label for="user">Nombres</label>
+                        <input type="text" placeholder="Nombres" name="nombres1" id="nombres1" class="form-control">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="user">Apellidos</label>
+                        <input type="text" placeholder="Apellidos" name="apellidos1" id="apellidos1"
+                            class="form-control">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="user">Correo Institucional</label>
+                        <input type="text" placeholder="Correo institucional" name="email1" id="email1"
+                            class="form-control">
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <h3>Segundo Integrante</h3>
+                    <div class="form-group">
+                        <label for="user">Nombres</label>
+                        <input type="text" placeholder="Nombres" name="nombres2" id="nombres2" class="form-control">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="user">Apellidos</label>
+                        <input type="text" placeholder="Apellidos" name="apellidos2" id="apellidos2"
+                            class="form-control">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="user">Correo Institucional</label>
+                        <input type="text" placeholder="Correo institucional" name="email2" id="email2"
+                            class="form-control">
+                    </div>
+                    <br>
+                    <br>
+
+                    <h3>Tercer Integrante</h3>
+                    <div class="form-group">
+                        <label for="user">Nombres</label>
+                        <input type="text" placeholder="Nombres" name="nombres3" id="nombres3" class="form-control">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="user">Apellidos</label>
+                        <input type="text" placeholder="Apellidos" name="apellidos3" id="apellidos3"
+                            class="form-control">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="user">Correo Institucional</label>
+                        <input type="text" placeholder="Correo institucional" name="email3" id="email3"
+                            class="form-control">
+                    </div>
+                    <br>
+                    <a onclick="return confirm('¿Esta seguro de abandonar el envio del proyecto?')" href="">
+                        << Salir</a>
+                            <br>
+                            <a onclick="" href=""> Siguiente >> </a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

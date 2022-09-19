@@ -21,6 +21,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('login/', views.login_views, name='login'),
-    path('registro/', views.registro_views, name='registro')
+    path('registro/', views.registro_views, name='registro'),
     # path('admin/', admin.site.urls),
+    path('inicioAdministrador/', views.inicioAdministrador_views, name='inicioAdministrador'),
+    path('inicioEstudiante/', views.inicioEstudiante_views, name='inicioEstudiante'),
+    path('inicioProfesor/', views.inicioProfesor_views, name='inicioProfesor'),
+    path('perfilEstudiante/', views.perfilEstudiante_views, name='perfilEstudiante'),
+    path('perfilProfesor/', views.perfilProfesor_views, name='perfilProfesor'),
+    path('registroGrupo/', views.registroGrupo_views, name='registroGrupo'),
+    path('registroProyecto/', views.registroProyecto_views, name='registroProyecto')
 ]
