@@ -41,9 +41,9 @@
     <div class="container">
         <div class="row">
             <div class="col justify-content-center align-self-center">
-                <img src="{%static 'imgs/humans_characters.png'%}" alt=""
-               class="img-fluid align-middle" style="width: 50rem;">
-           </div>
+                <img src="{%static 'imgs/humans_characters.png'%}" alt="" class="img-fluid align-middle"
+                    style="width: 50rem;">
+            </div>
             <div class="col m-2">
                 <div class="card fondo p-4" style="color:#fff;">
                     <div class="card-header">
@@ -57,11 +57,10 @@
                                     va
                                     acorde
                                     al semestre donde haya mayor numero de número de integrantes).<br>
-                                    Ciclo 1 (1 a 3 semestre); Ciclo 2 (4 a 6 semestre); Ciclo 3 (7 a 9 semestre)
-                                </p>
+                                    Ciclo 1 (1 a 3 semestre); Ciclo 2 (4 a 6 semestre); Ciclo 3 (7 a 9 semestre)</p>
                             </div>
-                            <div class="accordion accordion-borderless" id="accordionExample">
-                                <div class="accordion-item"">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseOne" aria-expanded="true"
@@ -71,7 +70,7 @@
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show"
                                         aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
+                                        <div class="accordion-body" ;">
                                             <div class="form-group">
                                                 <input type="radio" name="preg1" value="1" /> Ciclo I
                                             </div>
@@ -96,10 +95,9 @@
                                         aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <div class="form-group">
-                                                <label for="user">Nombre del proyecto integrador tal cual aparece en el
-                                                    document que va a subir</label>
-                                                <input type="text" placeholder="Nombre del Proyecto" name="nombrep"
-                                                    id="nombrep" class="form-control">
+                                                <h5>Nombre del proyecto integrador tal cual aparece en el
+                                                    document que va a subir</h5>
+                                                <input type="text" placeholder="Nombre del Proyecto" name="nombrep" id="nombrep" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -115,40 +113,55 @@
                                     <div id="collapseThree" class="accordion-collapse collapse"
                                         aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <label for="Documento">Cargue su documento en formato PDF</label>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <div class="input-group mb-3">
+                                                    <h5>Seleccione su documento en formato PDF</h5>
+                                                    <input type="file" class="form-control" id="Documento">
+                                                </div>
+                                                    <button class="btn btn-danger"
+                                                        onclick="return confirm('¿Esta seguro de eliminar este documento?')">
+                                                        <i class="bi bi-trash"></i>
+                                                    </button>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <li class="list-group-item">
+                                                        <div class="input-group mb-3">
+                                                        <h5>Seleccione su anexos en formato PDF</h5>
+                                                        <input type="file" class="form-control" id="Documento">
+                                                    </div>
+                                                        <button class="btn btn-danger"
+                                                            onclick="return confirm('¿Esta seguro de eliminar este anexo?')">
+                                                            <i class="bi bi-trash"></i>
+                                                        </button>
+                                                </li>
 
-                                            <input type="file">
-                                            <button onclick="return confirm('¿Esta seguro de eliminar este documento?')"
-                                                href="">Eliminar archivo
-                                            </button>
+                                            </ul>
 
-                                            <label for="Documento">Cargue los anexos de su proyecto en formato
-                                                PDF</label>
 
-                                            <input type="file">
-                                            <button onclick="return confirm('¿Esta seguro de eliminar este anexo?')">
-                                                Eliminar archivo
-                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <button onclick="return confirm('¿Esta seguro de enviar este proyecto?')"
-                                type="submit">Enviar proyecto
-                            </button>
+                            <div class="text-center mt-2">
+                                <button class="w-50" id="boton"
+                                    onclick="return confirm('¿Esta seguro de enviar este proyecto?')"
+                                    type="submit">Enviar proyecto
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
-            
+
         </div>
-    </div>  
-    <br> 
+    </div>
+    <br>
     <footer class="footer mt-auto py-3 fondo">
         <div class="container">
-          <span class="text-muted">Place sticky footer content here.</span>
+            <span class="text-muted">Place sticky footer content here.</span>
         </div>
-      </footer>
+    </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"

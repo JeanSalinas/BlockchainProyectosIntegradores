@@ -20,7 +20,6 @@
 .fondo{
     backdrop-filter: blur(5px);
     background-color: rgba(34, 32, 32, 0.5);
-
 }
 #boton{
     transition: all 1s;
@@ -60,3 +59,8 @@
     background-color: rgba(34, 32, 32, 0.5); 
 }
 /* hacer tranisicion de hover */
+.accordion{
+    --accordion-bg:rgba(34, 32, 32, 0.5);
+    
+}
+
