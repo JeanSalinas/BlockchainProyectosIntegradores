@@ -6,21 +6,162 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil Estudiante</title>
+    <title>{{title}}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{%static 'css/styles.css'%}">
 </head>
 
 <body>
-    <h1>Notas y observaciones del proyecto</h1>
-    <form>
-        <a onclick="return confirm('¿Esta seguro de salir?')" class="btn btn-success" href="">Salir</a>
-        <a class="btn btn-success" href="">Enviar Proyecto</a>
-    </form>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
+    <!--Contenedor de Boostrap-->
+    <nav class="nav navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid float-end">
+            <a class="navbar-brand" href="#" style="color: white;">
+                <img src="http://cdn.onlinewebfonts.com/svg/img_140098.png" alt="Logo" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                Perfil Estudiante
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a style="color: white;" class="nav-link active bt-inicio" aria-current="page"
+                            href="/registroGrupo"><i class="bi bi-file-pdf"></i> Enviar Proyecto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a onclick="return confirm('¿Esta seguro de salir?')" style="color: white;"
+                            class="nav-link active bt-login" href="/inicioEstudiante"><i
+                                class="bi bi-door-open"></i>Salir</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+    <div class="container pt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <!--Tarjeta formulario-->
+                <div class="card">
+                    <div class="card-header">
+
+                        <div class="row">
+
+                        </div>
+                        <form>
+                            <a style="color: black;" class="nav-link active bt-inicio" aria-current="page" href=""><i
+                                    class="bi bi-gear-fill"></i> Editar perfil</a>
+                            <center>
+                                <h2>Perfil</h2>
+                                <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" width="100 px">
+                            </center>
+                            <center>
+                                <div class="form-group">
+                                    <h2>Jean Sebastian</h2>
+                                </div>
+                                <div class="form-group">
+                                    <h4>Gomez Salinas</h4>
+                                </div>
+                                <div class="form-group">
+                                    <h4>9 semestre</h4>
+                                </div>
+                                <div class="form-group">
+                                    <h5>Ing. de Sistemas</h5>
+                                </div>
+                                <div class="form-group">
+                                    <h6>Universidad de Cundinamarca Seccional Ubate</h6>
+                                </div>
+                                <div class="form-group">
+                                    <h4>Promedio 3.4</h4>
+                                </div>
+                            </center>
+                        </form>
+                    </div>
+                </div>
+                <!--Fin tarjeta formulario-->
+            </div>
+
+            <!--Inicio carta primer entrega-->
+            <div class="container pt-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <!--Tarjeta formulario-->
+                        <div class="card">
+                            <div class="card-header">
+
+                                <div class="row">
+
+                                </div>
+                                <form>
+                                    <center>
+                                        <h2>Primer entrega</h2>
+                                        <img src="https://cdn-icons-png.flaticon.com/512/3979/3979423.png"
+                                            width="100 px">
+                                    </center>
+                                    <center>
+                                        <div class="form-group">
+                                            <h4>Proyecto</h4>
+                                            <a href="">Documento</a>
+                                        </div>
+                                        <div class="form-group">
+                                            <h4>Observaciones</h4>
+                                            <a href="">Observaciones</a>
+                                        </div>
+                                        <div class="form-group">
+                                            <h4>Calificación </h4>
+                                            <a href=""> Calificación </a>
+                                        </div>
+                                    </center>
+
+                                </form>
+                            </div>
+                        </div>
+                        <!--Fin tarjeta formulario primer entrega-->
+                    </div>
+
+                    <!--Inicio carta segunda entrega-->
+                    <div class="container pt-4">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <!--Tarjeta formulario-->
+                                <div class="card">
+                                    <div class="card-header">
+
+                                        <div class="row">
+
+                                        </div>
+                                        <form>
+                                            <center>
+                                                <h2>Segunda entrega</h2>
+                                                <img src="https://cdn-icons-png.flaticon.com/512/3979/3979423.png"
+                                                    width="100 px">
+                                            </center>
+                                            <center>
+                                                <div class="form-group">
+                                                    <h4>Proyecto</h4>
+                                                    <a href="">Documento</a>
+                                                </div>
+                                                <div class="form-group">
+                                                    <h4>Observaciones</h4>
+                                                    <a href="">Observaciones</a>
+                                                </div>
+                                                <div class="form-group">
+                                                    <h4>Calificación </h4>
+                                                    <a href=""> Calificación </a>
+                                                </div>
+                                            </center>
+
+                                        </form>
+                                    </div>
+                                </div>
+                                <!--Fin tarjeta formulario segunda entrega-->
+                            </div>
+
+                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+                                integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+                                crossorigin="anonymous"></script>
 </body>
 
 </html>
