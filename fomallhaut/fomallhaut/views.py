@@ -41,5 +41,12 @@ def registroProyecto_views(request):
     return render(request, 'formularios/registroProyecto.html',{
         "title":"Registro Proyecto Integrador"
     })
-
+def recuperarPass_views(request):
+    return render(request, 'formularios/recuperarPass.html',{
+        "title":"Recuperar Contraseña"
+    })
+def nuevaPass_views(request):
+    return render(request, 'formularios/nuevaPass.html',{       
+        "title":"Nueva Contraseña"                                
+    })
 

@@ -29,5 +29,7 @@ urlpatterns = [
     path('perfilEstudiante/', views.perfilEstudiante_views, name='perfilEstudiante'),
     path('perfilProfesor/', views.perfilProfesor_views, name='perfilProfesor'),
     path('registroGrupo/', views.registroGrupo_views, name='registroGrupo'),
-    path('registroProyecto/', views.registroProyecto_views, name='registroProyecto')
+    path('registroProyecto/', views.registroProyecto_views, name='registroProyecto'),
+    path('recuperarPass/', views.recuperarPass_views, name='recuperarPass'),
+    path('nuevaPass/', views.nuevaPass_views, name='nuevaPass')
 ]
