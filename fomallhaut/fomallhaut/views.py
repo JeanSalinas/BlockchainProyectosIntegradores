@@ -33,6 +33,10 @@ def perfilProfesor_views(request):
     return render(request, 'formularios/perfilProfesor.html',{
         "title":"Perfil Profesor"
     })
+def perfilAdministrador_views(request):
+    return render(request, 'formularios/perfilAdministrador.html',{
+        "title":"Perfil Administrador"
+    })
 def registroGrupo_views(request):
     return render(request, 'formularios/registroGrupo.html',{
         "title":"Registro Grupo"
