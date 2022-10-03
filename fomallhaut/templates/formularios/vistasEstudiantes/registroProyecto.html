@@ -1,53 +1,11 @@
+{%extends 'base.html'%}
 {%load static%}
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="{%static 'css/styles.css'%}">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-
-<body class="d-flex flex-column h-100">
-    <div id="particles-js"></div>
-    <nav class="nav navbar navbar-expand-lg sticky-top">
-        <div class="container-fluid float-end">
-            <a class="navbar-brand" href="#" style="color: white;">
-                <img src="http://cdn.onlinewebfonts.com/svg/img_140098.png" alt="Logo" width="30" height="24"
-                    class="d-inline-block align-text-top">
-                Registro Proyecto
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a style="color: white;" class="nav-link active bt-login" href="/registroGrupo"><i
-                                class="bi bi-arrow-left-square"></i>Grupo
-                            de Trabajo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a onclick="return confirm('¿Esta seguro de salir?')" style="color: white;"
-                            class="nav-link active bt-login" href="/perfilEstudiante"><i
-                                class="bi bi-door-open"></i>Salir</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container">
+    {% comment %}  {% endcomment %}
+    {%block content%}
         <div class="row">
             <div class="col justify-content-center align-self-center">
                 <img src="{%static 'imgs/humans_characters.png'%}" alt="" class="img-fluid align-middle"
-                    style="width: 50rem;">
+                style="width: 50rem;">
             </div>
             <div class="col m-2">
                 <div class="card fondo p-4" style="color:#fff;">
@@ -156,22 +114,4 @@
                 </div>
             </div>
         </div>
-    </div>
-    <br>
-    <footer class="footer mt-auto py-3 fondo">
-        <div class="container">
-            <span class="text-muted">Place sticky footer content here.</span>
-        </div>
-    </footer>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-    crossorigin="anonymous"></script>
-<script src="{%static 'js/particles.js'%}"></script>
-<script>
-    particlesJS.load('particles-js', "{%static 'js/particles.json'%}", function () {
-        console.log('callback - particles.js config loaded');
-    });
-</script>
-
-</html>
+{%endblock%}

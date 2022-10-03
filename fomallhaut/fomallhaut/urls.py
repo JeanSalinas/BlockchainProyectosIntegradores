@@ -31,6 +31,6 @@ urlpatterns = [
     path('perfilAdministrador/', views.perfilAdministrador_views, name='perfilAdministrador'),
     path('registroGrupo/', views.registroGrupo_views, name='registroGrupo'),
     path('registroProyecto/', views.registroProyecto_views, name='registroProyecto'),
-    path('recuperarPass/', views.recuperarPass_views, name='recuperarPass'),
-    path('nuevaPass/', views.nuevaPass_views, name='nuevaPass')
+    # path('recuperarPass/', views.recuperarPass_views, name='recuperarPass'),
+    # path('nuevaPass/', views.nuevaPass_views, name='nuevaPass')
 ]
