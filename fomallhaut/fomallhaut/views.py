@@ -33,6 +33,10 @@ def perfilProfesor_views(request):
     return render(request, 'formularios/perfilProfesor.html',{
         "title":"Perfil Profesor"
     })
+def perfilAdministrador_views(request):
+    return render(request, 'formularios/perfilAdministrador.html',{
+        "title":"Perfil Administrador"
+    })
 def registroGrupo_views(request):
     return render(request, 'formularios/registroGrupo.html',{
         "title":"Registro Grupo"
@@ -41,5 +45,12 @@ def registroProyecto_views(request):
     return render(request, 'formularios/registroProyecto.html',{
         "title":"Registro Proyecto Integrador"
     })
-
+def recuperarPass_views(request):
+    return render(request, 'formularios/recuperarPass.html',{
+        "title":"Recuperar Contraseña"
+    })
+def nuevaPass_views(request):
+    return render(request, 'formularios/nuevaPass.html',{       
+        "title":"Nueva Contraseña"                                
+    })
 

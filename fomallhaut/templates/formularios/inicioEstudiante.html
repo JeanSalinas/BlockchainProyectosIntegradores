@@ -21,7 +21,7 @@
             <a class="navbar-brand" href="#" style="color: white;">
                 <img src="http://cdn.onlinewebfonts.com/svg/img_140098.png" alt="Logo" width="30" height="24"
                     class="d-inline-block align-text-top">
-                Inicio de Sesion
+                Inicio de Sesion Estudiantes
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -66,9 +66,12 @@
                     <div class="text-center">
                         <a onclick="" class="btn btn-success" href="/perfilEstudiante">Ingresar</a>
                     </div>
+                    <!--<div class="text-center">
+                        <button type="submit" id="boton" class="w-50 p-1" href="/perfilEstudiante">Ingresar</button>
+                    </div>-->
                     <br>
                     <div class="text-center">
-                        <a href="">He olvidado mi contraseña</a>|
+                        <a href="/recuperarPass">He olvidado mi contraseña</a>|
                         <a href="/registro">Registrarse</a>
                     </div>
 
@@ -86,7 +89,7 @@
     </div>
 
 </body>
-<script src="{%static 'js/particles.js'%}"></script>}
+<script src="{%static 'js/particles.js'%}"></script>
 <script>
     particlesJS.load('particles-js', "{%static 'js/particles.json'%}", function () {
         console.log('callback - particles.js config loaded');
