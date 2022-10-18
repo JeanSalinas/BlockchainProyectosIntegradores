@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from  .usuario import Usuarios
 
 # Create your views here.
 def index(request):
@@ -13,6 +14,29 @@ def registro_views(request):
     return render(request, 'formularios/vistasEstudiantes/registro.html',{
         "title":"Registro"
 })
+def registro_usuario(request):
+    if request.method == 'POST':
+        nombres=request.POST['nombres']
+        apellidos=request.POST['apellidos']
+        tipo_documento=request.POST['tipo_documento']
+        numero_documento=request.POST['numero_identificacion']
+        numero_universidad=request.POST['numero_universidad']
+        correo_institucional=request.POST['email_insitucional']
+        contrasena=request.POST['contraseña']
+        rol="1"
+        ciclo="1"
+        usuario = Usuarios(nombres, apellidos, correo_institucional, tipo_documento, numero_documento, numero_universidad, contrasena, rol, ciclo)
+        usuario.set_usuario()
+        return redirect('')
+
+        
+
+
+
+
+
+
+
 def inicioAdministrador_views(request):
     return render(request, 'formularios/vistasAdministrador/inicioAdministrador.html',{
         "title":"Inicio Administrador"
