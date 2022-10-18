@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'fomallhaut.wsgi.application'
 
 DATABASES = {
     'default': {
-    #    'ENGINE': 'django.db.backends.postgresql',
-    #    'NAME': 'fomalhaut',
-    #    'USER': 'postgres',
-    #    'PASSWORD': '',
-    #    'HOST': 'localhost',
-    #    'PORT': '5432',
+       'ENGINE': 'django.db.backends.postgresql',
+       'NAME': 'fomalhaut',
+       'USER': 'postgres',
+       'PASSWORD': '',
+       'HOST': 'localhost',
+       'PORT': '5432',
    }
 }
 
