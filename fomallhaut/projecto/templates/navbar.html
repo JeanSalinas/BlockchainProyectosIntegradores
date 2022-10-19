@@ -1,19 +1,18 @@
 {% comment %} Variables para estudiantes {% endcomment %}
-{%url 'registro' as registroEstudiante%}
-{%url 'inicioEstudiante' as inicioEstudiante%}
+{%url 'registro' as registro%}
+{%url 'login' as login%}
 {%url 'perfilEstudiante' as perfilEstudiante%}
 {%url 'registroGrupo' as registroGrupo%}
 {%url 'registroProyecto' as registroProyecto%}
 
 {% comment %} Variables para profesores {% endcomment %}
-{%url 'inicioProfesor' as inicioProfesor%}
 {%url 'perfilProfesor' as perfilProfesor%}
 
 {% comment %} Variables para administradores {% endcomment %}
-{%url 'inicioAdministrador' as inicioAdministrador%}
 {%url 'perfilAdministrador' as perfilAdministrador%}
+
 {% comment %} Condiciones para mostrar el navbar {% endcomment %}
-{%if request.path == registroEstudiante%}
+{%if request.path == registro%}
     <nav class="nav navbar navbar-expand-lg sticky-top">
         <div class="container-fluid float-end">
             <a class="navbar-brand" href="#" style="color: white;">
@@ -43,13 +42,13 @@
         </div>
     </nav>   
 
-{%elif request.path == inicioEstudiante%}
+{%elif request.path == login%}
     <nav class="nav navbar navbar-expand-lg sticky-top">
     <div class="container-fluid float-end">
         <a class="navbar-brand" href="#" style="color: white;">
             <img src="http://cdn.onlinewebfonts.com/svg/img_140098.png" alt="Logo" width="30" height="24"
                 class="d-inline-block align-text-top">
-            Inicio de Sesion Estudiantes
+            Login
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -67,7 +66,7 @@
             </ul>
         </div>
     </div>
-    </nav> 
+</nav>  
 
 {%elif request.path == perfilEstudiante%}
     <nav class="nav navbar navbar-expand-lg sticky-top">
@@ -155,7 +154,7 @@
             </div>
         </div>
     </nav>
-{%elif request.path == inicioProfesor%}
+{% comment %} {%elif request.path == login%}
     <nav class="nav navbar navbar-expand-lg sticky-top">
         <div class="container-fluid float-end">
             <a class="navbar-brand" href="#" style="color: white;">
@@ -179,7 +178,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> {% endcomment %}
 {%elif request.path == perfilProfesor%}
     <nav class="nav navbar navbar-expand-lg sticky-top">
         <div class="container-fluid float-end">
@@ -204,7 +203,7 @@
             </div>
     </nav>
 
-{%elif request.path == inicioAdministrador%}
+{% comment %} {%elif request.path == inicioAdministrador%}
 <nav class="nav navbar navbar-expand-lg sticky-top">
     <div class="container-fluid float-end">
         <a class="navbar-brand" href="#" style="color: white;">
@@ -228,7 +227,7 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> {% endcomment %}
 {%elif request.path == perfilAdministrador%}
     <nav class="nav navbar navbar-expand-lg sticky-top">
         <div class="container-fluid float-end">

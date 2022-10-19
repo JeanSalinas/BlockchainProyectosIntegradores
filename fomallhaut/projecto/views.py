@@ -1,17 +1,37 @@
 from django.shortcuts import render, redirect
 from  .usuario import Usuarios
+from .models import Usuario, Rol, TipoDocumento, Proyecto, Calificaciones, ParametroSistemas
 
-# Create your views here.
+# Vista de inicio de la página web
 def index(request):
     return render(request, "index.html",{
         "title":"Inicio"
 })
+# Fin de inicio de la página web
+# Logins de los usuarios y funciones
 def login_views(request):
     return render(request, 'formularios/login.html', {
         'title': 'Login'
 })
+def login_sistema(request):
+    if request.method == 'POST':
+        correo_institucional=request.POST['email_institucional']
+        contrasena=request.POST['contraseña']
+        usuario = Usuario.objects.get(correo=correo_institucional, contrasena=contrasena)
+        if usuario.rol_id_id == 1:
+            return redirect('perfilEstudiante')
+        elif usuario.rol_id_id == 2:
+            return redirect('perfilProfesor')
+        elif usuario.rol_id_id == 3:
+            return redirect('perfilAdministrador')
+        else:
+            return redirect('login')
+    else:
+        return redirect('login')
+
+# En esta vista se maneja el manejo de registro de los usuarios
 def registro_views(request):
-    return render(request, 'formularios/vistasEstudiantes/registro.html',{
+    return render(request, 'formularios/registro.html',{
         "title":"Registro"
 })
 def registro_usuario(request):
@@ -27,28 +47,9 @@ def registro_usuario(request):
         ciclo="1"
         usuario = Usuarios(nombres, apellidos, correo_institucional, tipo_documento, numero_documento, numero_universidad, contrasena, rol, ciclo)
         usuario.set_usuario()
-        return redirect('')
+        return redirect('login')
+# Termina el manejo de registro de los usuarios
 
-        
-
-
-
-
-
-
-
-def inicioAdministrador_views(request):
-    return render(request, 'formularios/vistasAdministrador/inicioAdministrador.html',{
-        "title":"Inicio Administrador"
-    })
-def inicioEstudiante_views(request):
-    return render(request, 'formularios/vistasEstudiantes/inicioEstudiante.html',{
-        "title":"Inicio Estudiante"
-})
-def inicioProfesor_views(request):
-    return render(request, 'formularios/vistasProfesor/inicioProfesor.html',{
-        "title":"Inicio Profesor"
-})
 def perfilEstudiante_views(request):
     return render(request, 'formularios/vistasEstudiantes/perfilEstudiante.html',{
         "title":"Perfil Estudiante"
